@@ -4,7 +4,7 @@ metadata:
   name: mywebapp
   annotations:
     kubernetes.io/ingress.class: traefik
-    traefik.ingress.kubernetes.io/router.middlewares: dev-mywebapp-stripprefix@kubernetescrd
+    traefik.ingress.kubernetes.io/router.middlewares: dev-kustom-mywebapp-stripprefix-v1@kubernetescrd
 spec:
   rules:
     - host: www.mpi.com
