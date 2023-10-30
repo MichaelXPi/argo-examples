@@ -7,7 +7,7 @@ metadata:
     traefik.ingress.kubernetes.io/router.middlewares: default-myhelmapp-stripprefix@kubernetescrd
 spec:
   rules:
-    - host: k3s-vm.southcentralus.cloudapp.azure.com
+    - host: www.mpi.com
       http:
         paths:
           - path: /myhelmapp
