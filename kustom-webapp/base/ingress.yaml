@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: mywebapp
+  annotations:
+    kubernetes.io/ingress.class: traefik
+    traefik.ingress.kubernetes.io/router.middlewares: dev-mywebapp-stripprefix@kubernetescrd
+spec:
+  rules:
+    - host: www.mpi.com
+      http:
+        paths:
+          - path: /mywebapp
+            pathType: Prefix
+            backend:
+              service:
+                name: mywebapp
+                port:
+                  number: 80
