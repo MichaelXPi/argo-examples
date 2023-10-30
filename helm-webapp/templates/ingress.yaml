@@ -4,7 +4,7 @@ metadata:
   name: {{ .Values.appName }}
   annotations:
     kubernetes.io/ingress.class: traefik
-    traefik.ingress.kubernetes.io/router.middlewares: default-traefik-stripprefix@kubernetescrd
+    traefik.ingress.kubernetes.io/router.middlewares: default-myhelmapp-stripprefix@kubernetescrd
 spec:
   rules:
     - host: k3s-vm.southcentralus.cloudapp.azure.com
